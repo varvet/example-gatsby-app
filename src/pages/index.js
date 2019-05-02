@@ -17,6 +17,10 @@ const IndexPage = ({ data }) => (
         </li>
       ))}
     </ul>
+    <form>
+      <input type="text" name="title" />
+      <textarea name="message" />
+    </form>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
