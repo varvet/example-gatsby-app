@@ -8,7 +8,7 @@ import SEO from "../components/seo"
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <form method="POST" data-netlify="true">
+    <form method="POST" data-netlify="true" name="contact" action="/success">
       <label>
         Title
         <input type="text" name="title" />
