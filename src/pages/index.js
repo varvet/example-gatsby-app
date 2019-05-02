@@ -8,6 +8,21 @@ import SEO from "../components/seo"
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <form method="POST" data-netlify="true">
+      <label>
+        Title
+        <input type="text" name="title" />
+      </label>
+      <br />
+
+      <label>
+        Message
+        <textarea name="message" />
+      </label>
+
+      <button type="submit">Post message!</button>
+    </form>
+
     <h1>Hi people</h1>
     <ul>
       {data.dato.allPosts.map(post => (
@@ -17,10 +32,6 @@ const IndexPage = ({ data }) => (
         </li>
       ))}
     </ul>
-    <form>
-      <input type="text" name="title" />
-      <textarea name="message" />
-    </form>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
