@@ -27,6 +27,18 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        typeName: "DatoCMS",
+        fieldName: "dato",
+        url: "https://graphql.datocms.com/",
+        refetchInterval: 3,
+        headers: {
+          Authorization: "a23bca04c63e6098ad4f2b2b70d24f",
+        },
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
